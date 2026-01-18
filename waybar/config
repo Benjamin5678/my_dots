@@ -35,7 +35,8 @@
 			"shutdown": "poweroff",
 			"reboot": "reboot",
             "lock": "hyprlock",
-			"suspend": "hyprlock & sleep 1 && systemctl suspend"
+			"suspend": "hyprlock & sleep 1 && systemctl suspend",
+            "logout": "hyprctl dispatch exit"
 		}
     },
 
