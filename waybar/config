@@ -32,11 +32,12 @@
 		"menu": "on-click",
 		"menu-file": "$HOME/.config/waybar/power_menu.xml",
 		"menu-actions": {
-			"shutdown": "poweroff",
-			"reboot": "reboot",
-            "lock": "hyprlock",
-			"suspend": "hyprlock & sleep 1 && systemctl suspend",
-            "logout": "hyprctl dispatch exit"
+			"shutdown": "systemctl poweroff",
+			"reboot": "systemctl reboot",
+			"suspend": "loginctl lock-session && sleep 3 && systemctl suspend",
+            "hibernate": "loginctl lock-session && sleep 3 && systemctl hibernate",
+            "lock": "loginctl lock-session",
+            "logout": "loginctl terminate-session $XDG_SESSION_ID"
 		}
     },
 
