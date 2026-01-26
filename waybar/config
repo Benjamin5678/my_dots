@@ -37,7 +37,7 @@
 			"suspend": "loginctl lock-session && sleep 3 && systemctl suspend",
             "hibernate": "loginctl lock-session && sleep 3 && systemctl hibernate",
             "lock": "loginctl lock-session",
-            "logout": "loginctl terminate-session $XDG_SESSION_ID"
+            "logout": "loginctl terminate-user $USER"
 		}
     },
 
